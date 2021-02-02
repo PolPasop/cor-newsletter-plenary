@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "scripts": {
+    "local": "maizzle build",
+    "production": "maizzle build production",
+    "watch": "maizzle serve"
+  },
+  "dependencies": {
+    "@maizzle/framework": "^3.0.0"
+  },
+  "devDependencies": {
+    "fast-xml-parser": "^3.17.6",
+    "node-fetch": "^2.6.1"
+  }
+}
