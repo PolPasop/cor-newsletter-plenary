@@ -7,12 +7,6 @@ bodyClass: bg-corLight
 
 <extends src="src/layouts/master.html">
   <block name="template">
-    <ul>
-      <each loop="item in page.opinions.items">
-        <li><strong>{{ item.CoR_Op_AdoptionDate }}</strong>{{ item.Title }}</li>
-      </each>
-    </ul>
-
     <table class="w-full font-sans">
       <tr>
         <td align="center" class="sm:px-16">
@@ -75,6 +69,25 @@ bodyClass: bg-corLight
               <td class="h-32"></td>
             </tr>
             <tr>
+              <td class="px-48 sm:px-24 text-center">
+                <h3 class="m-0 text-base font-semibold text-gray-500 uppercase">
+                  In numbers
+                </h3>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <table class="w-full">
+                  <tr>
+                    <td class="w-3/12 bg-white">4 cols</td>
+                    <td class="w-3/12 bg-white">4 cols</td>
+                    <td class="w-3/12 bg-white">4 cols</td>
+                    <td class="w-3/12 bg-white">4 cols</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
               <td class="w-full px-24 sm:px-0 text-left">
                 <table class="w-full">
                   <tr>
@@ -132,6 +145,70 @@ bodyClass: bg-corLight
                 </table>
               </td>
             </tr>
+            <tr>
+              <td class="w-full px-24 sm:px-0 text-left">
+                      <table class="w-full">
+                        <tr>
+                          <td class="p-24 bg-white rounded">
+                            <h2 class="m-0 mb-24 text-2xl leading-24">
+                              Our political work.
+                            </h2>
+                            <p class="m-0 mb-24 text-base text-gray-800">
+                              Consectetur veniam ipsum ea sit est do voluptate
+                              laboris...
+                            </p>
+                            <a
+                              href="https://example.com"
+                              class="text-base text-blue-500 hover:text-blue-400 no-underline"
+                              >Read more &rarr;</a
+                            >
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+
+                            <table class="w-600 sm:w-full">
+                              <tr>
+                                
+                                <each loop="item in page.opinions.items">
+                                  <td class="w-6/12 sm:w-full inline-block">
+                                    <table class="sm:w-full font-sans shadow-xl rounded">
+                                      <tr>
+                                        <td height="250" class="bg-top bg-no-repeat bg-cover rounded text-left"
+                      style="background-image: url('https://cor.europa.eu/Members_Portraits/{{ item.CoR_Op_Rapporteur_ID }}.png'),url('https://cor.europa.eu/Members_Portraits/{{ item.CoR_Op_Rapporteur_ID }}.jpeg'), url('https://cor.europa.eu/Style%20Library/Cor/style/img/placeholderMember.png');">
+                                          <component
+                                              
+                                              src="src/components/vmlbg.html"
+                                              locals='{"width": 600, "height": 400, "src": "https://cor.europa.eu/Members_Portraits/{{ item.CoR_Op_Rapporteur_ID }}.png'
+                                          >
+                                          
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td class="bg-white p-20 rounded-br rounded-bl">
+                                          <span class="text-xs text-cool-gray-500">April 7, 2020</span>
+                                          <h2 class="mt-8 mb-12 text-2xl leading-full">
+                                            <a href="https://example.com" class="text-black hover:text-cool-gray-700 no-underline">{{ item.Title }}</a>
+                                          </h2>
+                                          By Rapporteur
+                                        <strong>{{ item.CoR_Op_Rapporteur }}</strong>
+                                          <p class="m-0 mb-16 text-base text-cool-gray-500">Anim ullamco anim ipsum Lorem id voluptate consequat excepteur proident cillum mollit. Tempor eiusmod fugiat minim Lorem.</p>
+                                          <a href="https://example.com" class="text-blue-500 no-underline hover:underline">Learn more &rarr;</a>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </each>
+                                
+                              </tr>
+                            </table>
+                          
+                            </td>
+                          
+                        </tr>
+                      </table>
+              </td>
             <tr>
               <td class="w-full px-24 sm:px-0 text-left">
                 <table class="w-full">
@@ -243,19 +320,70 @@ bodyClass: bg-corLight
               <td class="h-64 sm:h-32"></td>
             </tr>
             <tr>
-              <td
-                class="px-48 sm:px-24 py-16 bg-cool-gray-300 rounded text-left"
-              >
-                <p class="m-0 text-sm text-cool-gray-500">
-                  You are receiving this email because you signed up for Website
-                  Newsletter Weekly. You can
-                  <a
-                    href="https://example.com"
-                    class="text-blue-500 hover:text-blue-400 no-underline"
-                    >unsubscribe</a
-                  >
-                  at any time.
-                </p>
+              <td class="px-48 sm:px-24 text-left">
+                <h3 class="m-0 text-base font-semibold text-gray-500 uppercase">
+                  Follow us
+                </h3>
+              </td>
+            </tr>
+            <tr>
+              <td class="h-64 sm:h-32"></td>
+            </tr>
+            <tr>
+              <td>
+                <table class="w-600 sm:w-full">
+                  <tr>
+                    <td
+                      class="w-1/12"
+                    ></td>
+                    <td
+                      class="w-4/12  bg-cool-gray-300  text-center  border-r border-gray-300"
+                    >
+                      
+                      <p class="m-0 text-sm text-cool-gray-500">
+                        
+                        <a
+                          href=""
+                          class="text-blue-500 hover:text-blue-400 no-underline "
+                          >Manage subscription</a
+                        > 
+
+                        
+                      </p>
+                    </td>
+                    <td
+                      class="w-4/12   bg-cool-gray-300  text-center border-r border-gray-300"
+                    >
+                      <p class="m-0 text-sm text-cool-gray-500">
+                        
+
+                        <a
+                          href=""
+                          class="text-blue-500 hover:text-blue-400 no-underline "
+                          >Unsubscribe</a
+                        > 
+
+                        
+                      </p>
+                    </td>
+                    <td
+                      class="w-4/12 bg-cool-gray-300  text-center"
+                    >
+                      <p class="m-0 text-sm text-cool-gray-500">
+                      
+                        <a
+                          href=""
+                          class="text-blue-500 hover:text-blue-400 no-underline"
+                          >Legal notice</a
+                        >
+                        
+                      </p>
+                    </td>
+                    <td
+                      class="w-1/12"
+                    ></td>
+                  </tr>
+                </table>
               </td>
             </tr>
             <tr>

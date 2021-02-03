@@ -8,3 +8,9 @@ img {
   border: 0;
   @apply max-w-full leading-full align-middle;
 }
+
+*, ::before, ::after {
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}

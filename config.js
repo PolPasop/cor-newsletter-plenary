@@ -31,31 +31,32 @@ module.exports = {
     },
   },
   events: {
-      async beforeCreate(config) {
-        let feed = await fetch("https://cor.europa.eu/_api/web/lists/GetByTitle('Opinions')/items?SortField%3DCoR_Op_AdoptionDate-SortDir%3DAsc", {
-          headers: {
-            "Accept": "application/json; odata=verbose"
-          },
-        });
-        let opinions = await feed.json();
-        
-        config.opinions = {
-          items: opinions.d.results
-        };
+    async beforeCreate(config) {
+      // Get Opinions
+      let opinionsFeed = await fetch("https://cor.europa.eu/_api/web/lists/GetByTitle('Opinions')/items?$Filter=(CoR_Op_AdoptionDate ge datetime'2020-12-04T00:00:00') and (CoR_Op_AdoptionDate le datetime'2020-12-21T00:00:00')&$orderby=(CoR_Op_AdoptionDate)", {
+        headers: {
+          "Accept": "application/json; odata=verbose"
+        },
+      });
 
-        console.log(config.opinions);
-        /*
-        .then(function(response) {
-          const json = response.json();
-          return json;
-        }).then( json => {
-          config.opinions = {
-            items: json.d.results
-          }
+      let opinions = await opinionsFeed.json();
 
-          console.log(config.opinions);
-        })
-        */
-      }
+      config.opinions = {
+        items: opinions.d.results
+      };
+
+      // Get Members
+      let membersFeed = await fetch("https://cor.europa.eu/_api/web/lists/GetByTitle('Members')/items", {
+        headers: {
+          "Accept": "application/json; odata=verbose"
+        },
+      });
+      let members = await membersFeed.json();
+
+      config.members = {
+        items: members.d.results
+      };
+
+    }
   }
 } 
