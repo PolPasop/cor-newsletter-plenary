@@ -1,12 +1,15 @@
 ---
 title: "The Website Weekly Newsletter"
 preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
-image: https://images.unsplash.com/photo-1565932887479-b18108f07ffd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=80
+image: "images/plenary_illustration.png"
 bodyClass: bg-corLight
 ---
 
 <extends src="src/layouts/master.html">
   <block name="template">
+    <each loop="item in page.debates.items">
+    {{ item.Title}}
+    </each>
     <table class="w-full font-sans">
       <tr>
         <td align="center" class="sm:px-16">
@@ -23,19 +26,25 @@ bodyClass: bg-corLight
             </tr>
             <tr>
               <td
-                class="bg-top bg-no-repeat bg-cover rounded text-left"
+                class="bg-corPlenaryBlue bg-top bg-no-repeat  rounded text-left"
                 style="background-image: url('{{ page.image }}');"
               >
                 <component
                   src="src/components/vmlbg.html"
-                  locals='{"width": 600, "height": 400, "src": "https://images.unsplash.com/photo-1565932887479-b18108f07ffd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=80"}'
+                  locals='{"width": 600, "height": 600, "src": "images/plenary_illustration.png"}'
                 >
-                  <div class="leading-64 sm:h-32">&zwnj;</div>
+                  <div class="leading-64">&zwnj;</div>
+                  <div class="leading-64">&zwnj;</div>
+                  <div class="leading-64">&zwnj;</div>
+                  <div class="leading-64">&zwnj;</div>
+                  <div class="leading-64">&zwnj;</div>
+                  <div class="leading-64">&zwnj;</div>
+                  <div class="leading-64">&zwnj;</div>
                   <table class="w-full">
                     <tr>
                       <td class="w-48 sm:w-16"></td>
                       <td>
-                        <h1 class="m-0 mb-16 text-4xl text-white sm:leading-40">
+                        <h1 class="m-0 mb-16 text-4xl text-corPlenaryYellow sm:leading-40">
                           141st Plenary Session of the European Committee of the
                           regions
                         </h1>
@@ -79,10 +88,65 @@ bodyClass: bg-corLight
               <td>
                 <table class="w-full">
                   <tr>
-                    <td class="w-3/12 bg-white">4 cols</td>
-                    <td class="w-3/12 bg-white">4 cols</td>
-                    <td class="w-3/12 bg-white">4 cols</td>
-                    <td class="w-3/12 bg-white">4 cols</td>
+                    <td class="w-3/12 bg-white text-center p-24">
+                      <table>
+                        <tr><td><img src="images/icon-palette.png" width="25" height="25"/></td></tr>
+                        <tr><td>250</td></tr>
+                        <tr><td>visuals designed for the website</td></tr>
+                      </table>
+                    </td>
+                    <td class="w-3/12 bg-white p-24">
+                      <table>
+                        <tr><td><img src="images/icon-mailbox.png" width="25" height="25"/> </td></tr>
+                        <tr><td>22</td></tr>
+                        <tr><td>news items in e-newsletter</td></tr>
+                      </table>
+                    </td>
+                    <td class="w-3/12 bg-white p-24">
+                      <table>
+                        <tr><td><img src="images/icon-graph-up.png" width="25" height="25"/></td></tr>
+                        <tr><td>2161</td></tr>
+                        <tr><td>page views of the 141st Plenary </td></tr>
+                      </table>
+                    </td>
+                    <td class="w-3/12 bg-white p-24">
+                      <table>
+                        <tr><td><img src="images/icon-play-btn.png" width="25" height="25"/></td></tr>
+                        <tr><td>1763</td></tr>
+                        <tr><td>views of high-level debates</td></tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="w-3/12 bg-white p-24">
+                      <table>
+                        <tr><td><img src="images/icon-clock-history.png" width="25" height="25"/></td></tr>
+                        <tr><td>4</td></tr>
+                        <tr><td>minutes on average on the 141st Plenary page </td></tr>
+                      </table>
+                    </td>
+                    <td class="w-3/12 bg-white p-24">
+                      <table>
+                        <tr><td><img src="images/icon-chat-left-quote.png" width="25" height="25"/></td></tr>
+                        <tr><td>9</td></tr>
+                        <tr><td>Opinions discussed and adopted</td></tr>
+                      </table> 
+                    </td>
+                    <td class="w-3/12 bg-white p-24">
+                      <table>
+                        <tr><td><img src="images/icon-globe.png" width="25" height="25"/></td></tr>
+                        <tr><td>22</td></tr>
+                        <tr><td>countries with media partnerships </td></tr>
+                      </table>
+                    </td>
+                    <td class="w-3/12 bg-white p-24">
+                      <table>
+                        <tr><td><img src="images/icon-heart.png" width="25" height="25"/></td></tr>
+                        <tr><td>66%</td></tr>
+                        <tr><td>Brexit as the leading topic with 66%</td></tr>
+                      </table>
+                        
+                    </td>
                   </tr>
                 </table>
               </td>
@@ -91,7 +155,7 @@ bodyClass: bg-corLight
               <td class="w-full px-24 sm:px-0 text-left">
                 <table class="w-full">
                   <tr>
-                    <td class="w-full pb-32 sm:w-full sm:inline-block">
+                    <td class="w-full pb-32 sm:w-full sm:inline-block"> 
                       <table class="w-full">
                         <tr>
                           <td class="p-24 bg-white rounded">
@@ -169,39 +233,47 @@ bodyClass: bg-corLight
                           <td>
 
                             <table class="w-600 sm:w-full">
-                              <tr>
+                              
                                 
                                 <each loop="item in page.opinions.items">
-                                  <td class="w-6/12 sm:w-full inline-block">
-                                    <table class="sm:w-full font-sans shadow-xl rounded">
-                                      <tr>
-                                        <td height="250" class="bg-top bg-no-repeat bg-cover rounded text-left"
-                      style="background-image: url('https://cor.europa.eu/Members_Portraits/{{ item.CoR_Op_Rapporteur_ID }}.png'),url('https://cor.europa.eu/Members_Portraits/{{ item.CoR_Op_Rapporteur_ID }}.jpeg'), url('https://cor.europa.eu/Style%20Library/Cor/style/img/placeholderMember.png');">
-                                          <component
-                                              
-                                              src="src/components/vmlbg.html"
-                                              locals='{"width": 600, "height": 400, "src": "https://cor.europa.eu/Members_Portraits/{{ item.CoR_Op_Rapporteur_ID }}.png'
-                                          >
-                                          
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td class="bg-white p-20 rounded-br rounded-bl">
-                                          <span class="text-xs text-cool-gray-500">April 7, 2020</span>
-                                          <h2 class="mt-8 mb-12 text-2xl leading-full">
-                                            <a href="https://example.com" class="text-black hover:text-cool-gray-700 no-underline">{{ item.Title }}</a>
-                                          </h2>
-                                          By Rapporteur
-                                        <strong>{{ item.CoR_Op_Rapporteur }}</strong>
-                                          <p class="m-0 mb-16 text-base text-cool-gray-500">Anim ullamco anim ipsum Lorem id voluptate consequat excepteur proident cillum mollit. Tempor eiusmod fugiat minim Lorem.</p>
-                                          <a href="https://example.com" class="text-blue-500 no-underline hover:underline">Learn more &rarr;</a>
-                                        </td>
-                                      </tr>
-                                    </table>
-                                  </td>
+                                {{loop.index}}
+                                  <if condition="loop.index % 2 === 0">
+                                    <tr>
+                                  </if>
+                                  
+
+                                    <td class="w-6/12 sm:w-full inline-block">
+                                      <table class="sm:w-full font-sans shadow-xl rounded">
+                                        <tr>
+                                          <td height="250" class="bg-top bg-no-repeat bg-cover rounded text-left"
+                        style="background-image: url('https://cor.europa.eu/Members_Portraits/{{ item.CoR_Op_Rapporteur_ID }}.png'),url('https://cor.europa.eu/Members_Portraits/{{ item.CoR_Op_Rapporteur_ID }}.jpeg'), url('https://cor.europa.eu/Style%20Library/Cor/style/img/placeholderMember.png');">
+                                            <component
+                                                
+                                                src="src/components/vmlbg.html"
+                                                locals='{"width": 600, "height": 400, "src": "https://cor.europa.eu/Members_Portraits/{{ item.CoR_Op_Rapporteur_ID }}.png'
+                                            >
+                                            
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td class="bg-white p-20 rounded-br rounded-bl">
+                                            <h2 class="mt-8 mb-12 text-2xl leading-full">
+                                              <a href="https://example.com" class="text-black hover:text-cool-gray-700 no-underline">{{ item.Title }}</a>
+                                            </h2>
+                                            By Rapporteur
+                                          <strong>{{ item.CoR_Op_Rapporteur }}</strong>
+                                            <p class="m-0 mb-16 text-base text-cool-gray-500"></p>
+                                            <a href="https://example.com" class="text-blue-500 no-underline hover:underline">Learn more &rarr;</a>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  <if condition="loop.index % 2 === 0">
+                                    </tr>
+                                  </if>
                                 </each>
                                 
-                              </tr>
+                              
                             </table>
                           
                             </td>

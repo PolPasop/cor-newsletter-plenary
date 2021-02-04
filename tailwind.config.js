@@ -66,7 +66,13 @@ module.exports = {
         '11/12': '91.666667%',
       },
       colors: {
-        corLight: "#e6edec"
+        corLight: "#e6edec",
+      },
+      backgroundColor: {
+        corPlenaryBlue: "#016a9f",
+      },
+      textColor: {
+        corPlenaryYellow: "#FAC32F",
       },
       borderRadius: {
         sm: '2px',

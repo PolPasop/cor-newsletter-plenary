@@ -57,6 +57,14 @@ module.exports = {
         items: members.d.results
       };
 
+      // Get Debates
+      let debatesFeed = await fetch("https://cor.europa.eu/_layouts/15/restapi/restapi.aspx?op=GetAllListItems&site=/en/our-work/plenaries&list=debates&order=Plenary_Debate_Date");
+      let debates = await debatesFeed.json();
+
+      config.debates = {
+        items: debates.d.results
+      };
+      
     }
   }
 } 
