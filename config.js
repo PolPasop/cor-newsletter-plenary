@@ -12,6 +12,38 @@ const fetch = require("node-fetch");
 const parser = require('fast-xml-parser');
 
 module.exports = {
+  socialmedia: [
+    {
+      url: "https://twitter.com/EU_CoR",
+      name: "Twitter",
+      logoUrl: "https://cor.europa.eu/SiteCollectionImages/Newsletter/PostPlenaryNewsletter/logo-twitter.png"
+    },
+    {
+      url: "https://www.facebook.com/European.Committee.of.the.Regions/",
+      name: "Facebook",
+      logoUrl: "https://cor.europa.eu/SiteCollectionImages/Newsletter/PostPlenaryNewsletter/logo-facebook.png"
+    },
+    {
+      url: "https://www.instagram.com/eu_regions_cities/",
+      name: "Instagram",
+      logoUrl: "https://cor.europa.eu/SiteCollectionImages/Newsletter/PostPlenaryNewsletter/logo-instagram.png"
+    },
+    {
+      url: "https://www.linkedin.com/company/european-committee-of-the-regions/",
+      name: "Linkedin",
+      logoUrl: "https://cor.europa.eu/SiteCollectionImages/Newsletter/PostPlenaryNewsletter/logo-linkedin.png"
+    },
+    {
+      url: "http://www.youtube.com/user/pressecdr?hl=fr",
+      name: "Youtube",
+      logoUrl: "https://cor.europa.eu/SiteCollectionImages/Newsletter/PostPlenaryNewsletter/logo-youtube.png"
+    },
+    {
+      url: "http://www.flickr.com/photos/62673028@N02/sets",
+      name: "Flickr",
+      logoUrl: "https://cor.europa.eu/SiteCollectionImages/Newsletter/PostPlenaryNewsletter/logo-flickr.png"
+    }
+  ],
   build: {
     templates: {
       source: 'src/templates',

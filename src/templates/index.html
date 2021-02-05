@@ -1,0 +1,72 @@
+---
+title: "The Website Weekly Newsletter"
+preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
+image: "images/plenary_illustration.png"
+bodyClass: bg-corLight
+---
+
+<extends src="src/layouts/master.html">
+  <block name="template">
+    <table class="w-full font-sans">
+      <tr>
+        <td align="center" class="sm:px-16">
+          <table class="w-600 sm:w-full">
+            <tr>
+              <td>
+                <table class="bg-corPlenaryBlue">
+                  <tr>
+                    <td align="center" class="bg-corPlenaryBlue">
+                      <component src="src/components/header.html"></component>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="leading-64">&zwnj;</div></td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                      <component
+                        src="src/components/innumbersList.html"
+                      ></component>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="leading-64">&zwnj;</div></td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                      <component src="src/components/debates.html"></component>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="leading-64">&zwnj;</div></td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                      <component src="src/components/opinions.html"></component>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="leading-64">&zwnj;</div></td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                      <component src="src/components/alert.html"></component>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="leading-64">&zwnj;</div></td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                      <component src="src/components/footer.html"></component>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </block>
+</extends>

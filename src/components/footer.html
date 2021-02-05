@@ -1,9 +1,21 @@
 <table class="w-full">
   <tr>
-    <td class="px-48 sm:px-24 text-left">
-      <h3 class="m-0 text-base font-semibold text-gray-500 uppercase">
+    <td class="px-48 sm:px-24 text-center">
+      <h3 class="m-0 text-base font-semibold text-white uppercase">
         Follow us
       </h3>
+    </td>
+  </tr>
+  <tr>
+    <td class="h-32"></td>
+  </tr>
+  <tr>
+    <td class="text-center">
+      <each loop="item in page.socialmedia">
+        <a href="{{ item.url }}" name="{{ item.name }}" class="p-16"
+          ><img src="{{ item.logoUrl }}" width="50px" height="50px"
+        /></a>
+      </each>
     </td>
   </tr>
   <tr>
@@ -13,33 +25,21 @@
     <td>
       <table class="w-600 sm:w-full">
         <tr>
-          <td class="w-1/12"></td>
           <td
-            class="w-4/12 bg-cool-gray-300 text-center border-r border-gray-300"
+            class="w-4/12 bg-cool-gray-300 text-center border-r border-gray-300 text-white"
           >
-            <p class="m-0 text-sm text-cool-gray-500">
-              <a href="" class="text-blue-500 hover:text-blue-400 no-underline"
-                >Manage subscription</a
-              >
-            </p>
+            <a href="" class="text-white hover:text-blue-400 no-underline px-16"
+              >Manage subscription</a
+            >
+            |
+            <a href="" class="text-white hover:text-blue-400 no-underline px-16"
+              >Unsubscribe</a
+            >
+            |
+            <a href="" class="text-white hover:text-blue-400 no-underline px-16"
+              >Legal notice</a
+            >
           </td>
-          <td
-            class="w-4/12 bg-cool-gray-300 text-center border-r border-gray-300"
-          >
-            <p class="m-0 text-sm text-cool-gray-500">
-              <a href="" class="text-blue-500 hover:text-blue-400 no-underline"
-                >Unsubscribe</a
-              >
-            </p>
-          </td>
-          <td class="w-4/12 bg-cool-gray-300 text-center">
-            <p class="m-0 text-sm text-cool-gray-500">
-              <a href="" class="text-blue-500 hover:text-blue-400 no-underline"
-                >Legal notice</a
-              >
-            </p>
-          </td>
-          <td class="w-1/12"></td>
         </tr>
       </table>
     </td>
