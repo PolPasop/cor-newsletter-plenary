@@ -70,15 +70,16 @@ module.exports = {
       },
       colors: {
         corLight: "#e6edec",
+        corPlenaryBlueLight: "a5d2ee",
       },
       backgroundColor: {
-        corPlenaryBlue: "#016a9f",
+        corPlenaryBlue: "#2b6a9b",
         corBlueDark: "#004896",
         corPlenaryYellow: "#FAC32F",
       },
       textColor: {
         corPlenaryYellow: "#FAC32F",
-        corPlenaryBlue: "#016a9f",
+        corPlenaryBlue: "#2b6a9b",
       },
       borderRadius: {
         sm: '2px',
