@@ -64,7 +64,15 @@ module.exports = {
       config.debates = {
         items: debates.d.results
       };
-      
+
+      // get url from video field
+      [...config.debates.items].map( debate => debate.Plenary_Debate_VideoLinkURL = debate.Plenary_Debate_VideoLink.substr(0, debate.Plenary_Debate_VideoLink.indexOf(',')));
+      // get src from Speakerpictures
+      [...config.debates.items].map( debate => {
+        const regex = /<img.*?src=['"](.*?)['"]/;
+        debate.Plenary_Debate_SpeakerPictureURL = "https://cor.europa.eu" + regex.exec(debate.Plenary_Debate_SpeakerPicture)[1];;
+      });
+
     }
-  }
+  },
 } 

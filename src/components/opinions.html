@@ -1,0 +1,47 @@
+<table class="w-full">
+  <tr>
+    <td class="p-24 bg-white rounded">
+      <h2 class="m-0 mb-24 text-2xl leading-24">Our political work</h2>
+      <p class="m-0 mb-24 text-base text-gray-800">Introduction text</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <table>
+        <each loop="item in page.opinions.items">
+          <tr>
+            <td class="w-3/12">
+              <img
+                src="https://cor.europa.eu/Members_Portraits/{{ item.CoR_Op_Rapporteur_ID }}.jpeg"
+              />
+            </td>
+            <td class="w-9/12 bg-white p-20 rounded-br rounded-bl">
+              <h3 class="mt-8 mb-12 text-l">
+                <a
+                  href="https://example.com"
+                  class="text-black hover:text-cool-gray-700 no-underline"
+                  >{{ item.Title }}</a
+                >
+              </h3>
+              By Rapporteur
+              <strong>{{ item.CoR_Op_Rapporteur }}</strong>
+              <p class="m-0 mb-16 text-base text-cool-gray-500"></p>
+              <a
+                href="https://example.com"
+                class="text-blue-500 no-underline hover:underline"
+                >Learn more &rarr;</a
+              >
+            </td>
+          </tr>
+          <if condition="!loop.last">
+            <tr>
+              <td class="bg-white" colspan="2">
+                <hr class="border-0 bg-gray-100 text-gray-500 h-px" />
+              </td>
+            </tr>
+          </if>
+        </each>
+      </table>
+    </td>
+  </tr>
+</table>

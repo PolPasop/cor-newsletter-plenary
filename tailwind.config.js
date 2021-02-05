@@ -37,6 +37,9 @@ module.exports = {
         72: '72px',
         80: '80px',
         96: '96px',
+        300: '300px',
+        400: '400px',
+        500: '500px',
         600: '600px',
         '1/2': '50%',
         '1/3': '33.333333%',
@@ -70,9 +73,12 @@ module.exports = {
       },
       backgroundColor: {
         corPlenaryBlue: "#016a9f",
+        corBlueDark: "#004896",
+        corPlenaryYellow: "#FAC32F",
       },
       textColor: {
         corPlenaryYellow: "#FAC32F",
+        corPlenaryBlue: "#016a9f",
       },
       borderRadius: {
         sm: '2px',

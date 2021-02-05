@@ -1,0 +1,591 @@
+---
+title: "The Website Weekly Newsletter"
+preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
+image: "images/plenary_illustration.png"
+bodyClass: bg-corLight
+---
+
+<extends src="src/layouts/master.html">
+  <block name="template">
+    <table class="w-full font-sans">
+      <tr>
+        <td align="center" class="sm:px-16">
+          <table class="w-600 sm:w-full">
+            <tr>
+              <td class="bg-corPlenaryBlue">
+                <a href="https://maizzle.com">
+                  <img
+                    width="350"
+                    height="139"
+                    src="images/CoR.png"
+                    alt="Logo of the Committe of the Regions"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="bg-corPlenaryBlue bg-top bg-no-repeat text-left"
+                style="background-image: url('{{ page.image }}');"
+              >
+                <component
+                  src="src/components/vmlbg.html"
+                  locals='{"width": 600, "height": 600, "src": "images/plenary_illustration.png"}'
+                ></component>
+                <div class="leading-64">&zwnj;</div>
+                <div class="leading-64">&zwnj;</div>
+                <div class="leading-64">&zwnj;</div>
+                <div class="leading-64">&zwnj;</div>
+                <div class="leading-64">&zwnj;</div>
+                <table class="w-full">
+                  <tr>
+                    <td class="w-48 sm:w-16"></td>
+                    <td>
+                      <h1
+                        class="m-0 mb-16 text-4xl text-corPlenaryYellow sm:leading-40"
+                      >
+                        141st Plenary Session of the European Committee of the
+                        regions
+                      </h1>
+                      <p class="m-0 text-white text-lg leading-24">
+                        Highlights from the first ever fully virtual session.
+                      </p>
+                      <div class="leading-64 sm:h-32">&zwnj;</div>
+                      <table>
+                        <tr>
+                          <th
+                            class="bg-corBlueDark hover:bg-indigo-700 rounded"
+                            style="mso-padding-alt: 16px 24px"
+                          >
+                            <a
+                              href="https://example.com"
+                              class="block font-semibold text-white text-base leading-full py-16 px-24 no-underline"
+                              >Read more &rarr;</a
+                            >
+                          </th>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="w-48 sm:w-16"></td>
+                  </tr>
+                </table>
+                <div class="leading-64 sm:h-32">&zwnj;</div>
+              </td>
+            </tr>
+            <tr>
+              <td class="h-32"></td>
+            </tr>
+            <tr>
+              <td class="px-48 sm:px-24 text-center">
+                <h3 class="m-0 text-base font-semibold text-gray-500 uppercase">
+                  In numbers
+                </h3>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <table class="w-full">
+                  <tr>
+                    <td class="w-3/12 bg-white text-center p-24">
+                      <table>
+                        <tr>
+                          <td>
+                            <img
+                              src="images/icon-palette.png"
+                              width="25"
+                              height="25"
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>250</td>
+                        </tr>
+                        <tr>
+                          <td>visuals designed for the website</td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="w-3/12 bg-white p-24">
+                      <table>
+                        <tr>
+                          <td>
+                            <img
+                              src="images/icon-mailbox.png"
+                              width="25"
+                              height="25"
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>22</td>
+                        </tr>
+                        <tr>
+                          <td>news items in e-newsletter</td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="w-3/12 bg-white p-24">
+                      <table>
+                        <tr>
+                          <td>
+                            <img
+                              src="images/icon-graph-up.png"
+                              width="25"
+                              height="25"
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2161</td>
+                        </tr>
+                        <tr>
+                          <td>page views of the 141st Plenary</td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="w-3/12 bg-white p-24">
+                      <table>
+                        <tr>
+                          <td>
+                            <img
+                              src="images/icon-play-btn.png"
+                              width="25"
+                              height="25"
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>1763</td>
+                        </tr>
+                        <tr>
+                          <td>views of high-level debates</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="w-3/12 bg-white p-24">
+                      <table>
+                        <tr>
+                          <td>
+                            <img
+                              src="images/icon-clock-history.png"
+                              width="25"
+                              height="25"
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                        </tr>
+                        <tr>
+                          <td>minutes on average on the 141st Plenary page</td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="w-3/12 bg-white p-24">
+                      <table>
+                        <tr>
+                          <td>
+                            <img
+                              src="images/icon-chat-left-quote.png"
+                              width="25"
+                              height="25"
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>9</td>
+                        </tr>
+                        <tr>
+                          <td>Opinions discussed and adopted</td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="w-3/12 bg-white p-24">
+                      <table>
+                        <tr>
+                          <td>
+                            <img
+                              src="images/icon-globe.png"
+                              width="25"
+                              height="25"
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>22</td>
+                        </tr>
+                        <tr>
+                          <td>countries with media partnerships</td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="w-3/12 bg-white p-24">
+                      <table>
+                        <tr>
+                          <td>
+                            <img
+                              src="images/icon-heart.png"
+                              width="25"
+                              height="25"
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>66%</td>
+                        </tr>
+                        <tr>
+                          <td>Brexit as the leading topic with 66%</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td class="w-full px-24 sm:px-0 text-left">
+                <table class="w-full">
+                  <tr>
+                    <td class="w-full pb-32 sm:w-full sm:inline-block">
+                      <table class="w-full">
+                        <tr>
+                          <td class="p-24 bg-white rounded">
+                            <h2 class="m-0 mb-24 text-2xl leading-24">
+                              In numbers
+                            </h2>
+                            <p class="m-0 mb-24 text-base text-gray-800">
+                              Ex consequat deserunt id cupidatat exercitation
+                              irure commodo. Dolor et est irure elit cupidatat
+                              laborum veniam amet eiusmod Lorem ex ea do aliqua.
+                              Ipsum Lorem nulla sit aliqua quis veniam magna...
+                            </p>
+                            <a
+                              href="https://example.com"
+                              class="text-base text-blue-500 hover:text-blue-400 no-underline"
+                              >Read more &rarr;</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="p-24 bg-white rounded">
+                            <table class="w-full">
+                              <tr>
+                                <td
+                                  class="w-3/12 p-1 border border-solid border-gray-200 rounded"
+                                >
+                                  4 cols
+                                </td>
+                                <td
+                                  class="w-3/12 p-1 border border-solid border-gray-200 rounded"
+                                >
+                                  4 cols
+                                </td>
+                                <td
+                                  class="w-3/12 p-1 border border-solid border-gray-200 rounded"
+                                >
+                                  4 cols
+                                </td>
+                                <td
+                                  class="w-3/12 p-1 border border-solid border-gray-200 rounded"
+                                >
+                                  4 cols
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td class="w-full px-24 sm:px-0 pb-32 text-left">
+                <table class="w-full">
+                  <tr>
+                    <td class="p-24 bg-white rounded">
+                      <h2 class="m-0 mb-24 text-2xl leading-24">
+                        In debate with
+                      </h2>
+                      <p class="m-0 mb-24 text-base text-gray-800">
+                        Introduction text
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table>
+                        <each loop="item in page.debates.items">
+                          <tr>
+                            <td
+                              class="w-3/12 bg-top bg-no-repeat bg-cover rounded text-left"
+                              style="background-image: url('https://cor.europa.eu/Members_Portraits/{{ item.CoR_Op_Rapporteur_ID }}.png'),url('https://cor.europa.eu/Members_Portraits/{{ item.CoR_Op_Rapporteur_ID }}.jpeg'), url('https://cor.europa.eu/Style%20Library/Cor/style/img/placeholderMember.png');"
+                            >
+                              <component
+                                src="src/components/vmlbg.html"
+                                locals='{"width": 600, "height": 400, "src": "https://cor.europa.eu/Members_Portraits/{{ item.CoR_Op_Rapporteur_ID }}.png'
+                              ></component>
+                            </td>
+                            <td
+                              class="w-9/12 bg-white p-20 rounded-br rounded-bl"
+                            >
+                              <h3 class="mt-8 mb-12 text-2xl leading-full">
+                                <a
+                                  href="https://example.com"
+                                  class="text-black hover:text-cool-gray-700 no-underline"
+                                  >{{ item.Title }}</a
+                                >
+                              </h3>
+
+                              <strong>{{ item.Speaker }}</strong>
+                              <p
+                                class="m-0 mb-16 text-base text-cool-gray-500"
+                              ></p>
+                              <a
+                                href="{{ item.Plenary_Debate_VideoLinkURL }}"
+                                class="text-blue-500 no-underline hover:underline"
+                                >Learn more &rarr;</a
+                              >
+                            </td>
+                          </tr>
+                          <if condition="!loop.last">
+                            <tr>
+                              <td class="bg-white" colspan="2">
+                                <hr
+                                  class="border-0 bg-gray-100 text-gray-500 h-px"
+                                />
+                              </td>
+                            </tr>
+                          </if>
+                        </each>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td class="w-full px-24 sm:px-0 text-left bg-white">
+                <table class="w-full">
+                  <tr>
+                    <td class="p-24 rounded">
+                      <h2 class="m-0 mb-24 text-2xl leading-24">
+                        Our political work.
+                      </h2>
+                      <p class="m-0 mb-24 text-base text-gray-800">
+                        The plenary assembly discussed and voted on the opinions
+                        listed here below.
+                      </p>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="p-24">
+                      <table class="w-600 sm:w-full table-fixed">
+                        <each loop="item in page.opinions.items">
+                          <tr>
+                            <td
+                              class="w-3/12 bg-top bg-no-repeat bg-cover rounded text-left"
+                              style="background-image: url('https://cor.europa.eu/Members_Portraits/{{ item.CoR_Op_Rapporteur_ID }}.png'),url('https://cor.europa.eu/Members_Portraits/{{ item.CoR_Op_Rapporteur_ID }}.jpeg'), url('https://cor.europa.eu/Style%20Library/Cor/style/img/placeholderMember.png');"
+                            >
+                              <component
+                                src="src/components/vmlbg.html"
+                                locals='{"width": 600, "height": 400, "src": "https://cor.europa.eu/Members_Portraits/{{ item.CoR_Op_Rapporteur_ID }}.png'
+                              ></component>
+                            </td>
+                            <td
+                              class="w-9/12 bg-white p-20 rounded-br rounded-bl"
+                            >
+                              <h3 class="mt-8 mb-12 text-2xl leading-full">
+                                <a
+                                  href="https://example.com"
+                                  class="text-black hover:text-cool-gray-700 no-underline"
+                                  >{{ item.Title }}</a
+                                >
+                              </h3>
+                              By Rapporteur
+                              <strong>{{ item.CoR_Op_Rapporteur }}</strong>
+                              <p
+                                class="m-0 mb-16 text-base text-cool-gray-500"
+                              ></p>
+                              <a
+                                href="https://example.com"
+                                class="text-blue-500 no-underline hover:underline"
+                                >Learn more &rarr;</a
+                              >
+                            </td>
+                          </tr>
+                          <if condition="!loop.last">
+                            <tr>
+                              <td class="bg-white" colspan="2">
+                                <hr
+                                  class="border-0 bg-gray-100 text-gray-500 h-px"
+                                />
+                              </td>
+                            </tr>
+                          </if>
+                        </each>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="h-64 sm:h-32"></td>
+            </tr>
+            <tr>
+              <td class="px-48 sm:px-24 text-left">
+                <h3 class="m-0 text-base font-semibold text-gray-500 uppercase">
+                  From the archives
+                </h3>
+                <div class="leading-24">&zwnj;</div>
+                <table class="w-full">
+                  <tr>
+                    <td>
+                      <h4 class="m-0 mb-4 text-xl font-semibold">
+                        <a
+                          href="https://example.com"
+                          class="text-blue-500 hover:text-blue-400 no-underline"
+                          >Lorem velit tempor qui</a
+                        >
+                      </h4>
+                      <p class="m-0 text-gray-500">
+                        Aliquip excepteur sint voluptate Lorem nisi deserunt
+                        consequat...
+                      </p>
+                      <table class="w-full">
+                        <tr>
+                          <td class="py-24">
+                            <div class="bg-gray-300 h-px leading-px">
+                              &zwnj;
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <h4 class="m-0 mb-4 text-xl font-semibold">
+                        <a
+                          href="https://example.com"
+                          class="text-blue-500 hover:text-blue-400 no-underline"
+                          >Lorem velit tempor qui</a
+                        >
+                      </h4>
+                      <p class="m-0 text-gray-500">
+                        Aliquip excepteur sint voluptate Lorem nisi deserunt
+                        consequat...
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td class="h-64 sm:h-32"></td>
+            </tr>
+            <tr>
+              <td class="bg-blue-500 text-white rounded py-16 px-32">
+                <table class="w-full">
+                  <tr>
+                    <th class="text-lg text-center">
+                      Join us for the 142nd Plenary Session
+                    </th>
+                  </tr>
+                  <tr>
+                    <td class="h-20"></td>
+                  </tr>
+                  <tr>
+                    <th class="text-lg text-center">3 – 5 February 2021</th>
+                  </tr>
+                  <tr>
+                    <td class="h-32"></td>
+                  </tr>
+                  <tr>
+                    <th class="text-center">
+                      <table align="center">
+                        <tr>
+                          <th
+                            class="bg-corBlueDark hover:bg-indigo-700 rounded"
+                            style="mso-padding-alt: 16px 24px"
+                          >
+                            <a
+                              href="https://example.com"
+                              class="block font-semibold text-white text-base leading-full py-16 px-24 no-underline"
+                              >Read more &rarr;</a
+                            >
+                          </th>
+                        </tr>
+                      </table>
+                    </th>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="px-48 sm:px-24 text-left">
+                <h3 class="m-0 text-base font-semibold text-gray-500 uppercase">
+                  Follow us
+                </h3>
+              </td>
+            </tr>
+            <tr>
+              <td class="h-64 sm:h-32"></td>
+            </tr>
+            <tr>
+              <td>
+                <table class="w-600 sm:w-full">
+                  <tr>
+                    <td class="w-1/12"></td>
+                    <td
+                      class="w-4/12 bg-cool-gray-300 text-center border-r border-gray-300"
+                    >
+                      <p class="m-0 text-sm text-cool-gray-500">
+                        <a
+                          href=""
+                          class="text-blue-500 hover:text-blue-400 no-underline"
+                          >Manage subscription</a
+                        >
+                      </p>
+                    </td>
+                    <td
+                      class="w-4/12 bg-cool-gray-300 text-center border-r border-gray-300"
+                    >
+                      <p class="m-0 text-sm text-cool-gray-500">
+                        <a
+                          href=""
+                          class="text-blue-500 hover:text-blue-400 no-underline"
+                          >Unsubscribe</a
+                        >
+                      </p>
+                    </td>
+                    <td class="w-4/12 bg-cool-gray-300 text-center">
+                      <p class="m-0 text-sm text-cool-gray-500">
+                        <a
+                          href=""
+                          class="text-blue-500 hover:text-blue-400 no-underline"
+                          >Legal notice</a
+                        >
+                      </p>
+                    </td>
+                    <td class="w-1/12"></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td class="h-48 sm:h-32"></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </block>
+</extends>
