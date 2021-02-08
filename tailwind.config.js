@@ -73,13 +73,13 @@ module.exports = {
         corPlenaryBlueLight: "a5d2ee",
       },
       backgroundColor: {
-        corPlenaryBlue: "#2b6a9b",
+        corPlenaryBlue: "#006B9F",
         corBlueDark: "#004896",
         corPlenaryYellow: "#FAC32F",
       },
       textColor: {
         corPlenaryYellow: "#FAC32F",
-        corPlenaryBlue: "#2b6a9b",
+        corPlenaryBlue: "#006B9F",
       },
       borderRadius: {
         sm: '2px',

@@ -10,12 +10,27 @@
       <table>
         <each loop="item in page.debates.items">
           <tr>
-            <td class="w-3/12">
+            <td colspan="2">
+              <div class="italic p-20">
+                <img
+                  class="mr-20"
+                  width="20"
+                  src="images/icon-quote-right.png"
+                />
+                {{ item.Plenary_Debate_Quote }}
+                <img
+                  width="20"
+                  src="images/icon-quote-left.png"
+                  class="ml-20"
+                />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="w-2/12 p-20">
               <img src="{{ item.Plenary_Debate_SpeakerPictureURL }}" />
             </td>
-            <td class="w-9/12 bg-white p-20 rounded-br rounded-bl">
-              <h3 class="mt-8 mb-12 text-l">{{ item.Title }}</h3>
-
+            <td class="w-10/12 bg-white px-20 pb-20 rounded-br rounded-bl">
               <strong>{{ item.Speaker }}</strong>
               <div class="m-0 mb-16 text-base text-gray-400 pt-12">
                 {{ item.Debate_SpeakerTitle }}
@@ -23,7 +38,7 @@
               <a
                 href="{{ item.Plenary_Debate_VideoLinkURL }}"
                 class="text-blue-500 no-underline hover:underline"
-                >View debate &rarr;</a
+                >Access the debate &rarr;</a
               >
             </td>
           </tr>
