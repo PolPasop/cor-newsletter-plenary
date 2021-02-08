@@ -64,6 +64,14 @@ module.exports = {
   },
   events: {
     async beforeCreate(config) {
+      // Get Members
+      let membersFeed = await fetch("https://cor.europa.eu/_layouts/15/restapi/restapi.aspx?op=GetAllMembers");
+      let members = await membersFeed.json();
+
+      config.members = {
+        items: members.d.results
+      };
+
       // Get Opinions
       let opinionsFeed = await fetch("https://cor.europa.eu/_api/web/lists/GetByTitle('Opinions')/items?$Filter=(CoR_Op_AdoptionDate ge datetime'2020-12-04T00:00:00') and (CoR_Op_AdoptionDate le datetime'2020-12-21T00:00:00')&$orderby=(CoR_Op_AdoptionDate)", {
         headers: {
@@ -76,18 +84,13 @@ module.exports = {
       config.opinions = {
         items: opinions.d.results
       };
-
-      // Get Members
-      let membersFeed = await fetch("https://cor.europa.eu/_api/web/lists/GetByTitle('Members')/items", {
-        headers: {
-          "Accept": "application/json; odata=verbose"
-        },
+      
+      // get picture for raporteur
+      [...config.opinions.items].map( opinion => {
+        const {ImgUrl} = [...config.members.items].find(member => member.Id === opinion.CoR_Op_Rapporteur_ID );
+        
+        opinion.Raporteur_Picture_URL = ImgUrl;
       });
-      let members = await membersFeed.json();
-
-      config.members = {
-        items: members.d.results
-      };
 
       // Get Debates
       let debatesFeed = await fetch("https://cor.europa.eu/_layouts/15/restapi/restapi.aspx?op=GetAllListItems&site=/en/our-work/plenaries&list=debates&order=Plenary_Debate_Date");

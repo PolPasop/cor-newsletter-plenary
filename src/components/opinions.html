@@ -11,9 +11,14 @@
         <each loop="item in page.opinions.items">
           <tr>
             <td class="w-3/12">
-              <img
-                src="https://cor.europa.eu/Members_Portraits/{{ item.CoR_Op_Rapporteur_ID }}.jpeg"
-              />
+              <if condition="item.Raporteur_Picture_URL">
+                <img src="{{ item.Raporteur_Picture_URL }}" />
+              </if>
+              <else>
+                <img
+                  src="https://cor.europa.eu/Style%20Library/Cor/style/img/placeholderMember.png"
+                />
+              </else>
             </td>
             <td class="w-9/12 bg-white p-20 rounded-br rounded-bl">
               <h3 class="mt-8 mb-12 text-l">
