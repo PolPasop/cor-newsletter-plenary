@@ -1,7 +1,7 @@
 module.exports = {
   theme: {
     screens: {
-      sm: {max: '600px'},
+      sm: { max: '600px' },
     },
     extend: {
       spacing: {
@@ -76,6 +76,8 @@ module.exports = {
         corPlenaryBlue: "#006B9F",
         corBlueDark: "#004896",
         corPlenaryYellow: "#FAC32F",
+        corEuropcomBlueLight: "#9bc5ce",
+        corEuropcomBlueDark: "#232942",
       },
       textColor: {
         corPlenaryYellow: "#FAC32F",
