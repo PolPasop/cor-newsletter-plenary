@@ -2,55 +2,54 @@
   <tr>
     <td class="p-24">
       <h2 class="m-0 mb-24 text-2xl leading-24">In debate with</h2>
-      <p class="m-0 mb-24 text-base text-gray-800">Introduction text</p>
     </td>
   </tr>
-  <tr>
-    <td>
+  <each loop="item in page.debates.items">
+    <if condition="loop.index % 2 === 0">
+      <tr>
+    </if>
+
+    <td class="align-top">
       <table>
-        <each loop="item in page.debates.items">
-          <tr>
-            <td colspan="2">
-              <div class="italic p-20">
-                <img
-                  class="mr-20"
-                  width="20"
-                  src="images/icon-quote-right.png"
-                />
-                {{ item.Plenary_Debate_Quote }}
-                <img
-                  width="20"
-                  src="images/icon-quote-left.png"
-                  class="ml-20"
-                />
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td class="w-2/12 p-20">
-              <img src="{{ item.Plenary_Debate_SpeakerPictureURL }}" />
-            </td>
-            <td class="w-10/12 bg-white px-20 pb-20 rounded-br rounded-bl">
-              <strong>{{ item.Speaker }}</strong>
-              <div class="m-0 mb-16 text-base text-gray-400 pt-12">
-                {{ item.Debate_SpeakerTitle }}
-              </div>
-              <a
-                href="{{ item.Plenary_Debate_VideoLinkURL }}"
-                class="text-blue-500 no-underline hover:underline"
-                >Access the debate &rarr;</a
-              >
-            </td>
-          </tr>
-          <if condition="!loop.last">
-            <tr>
-              <td class="bg-white" colspan="2">
-                <hr class="border-0 bg-gray-100 text-gray-500 h-px" />
-              </td>
-            </tr>
-          </if>
-        </each>
+        <tr>
+          <td class="text-center">
+            <img src="{{ item.Plenary_Debate_SpeakerPictureURL }}" width="100px"/>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <div class="italic p-20">
+              <img
+                class="mr-20"
+                width="20"
+                src="images/icon-quote-right.png"
+              />
+              {{ item.Plenary_Debate_Quote }}
+              <img
+                width="20"
+                src="images/icon-quote-left.png"
+                class="ml-20"
+              />
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="w-10/12 bg-white px-20 pb-20 rounded-br rounded-bl">
+            <strong>{{ item.Speaker }}</strong>
+            <div class="m-0 mb-16 text-base text-gray-400 pt-12">
+              {{ item.Debate_SpeakerTitle }}
+            </div>
+            <a
+              href="{{ item.Plenary_Debate_VideoLinkURL }}"
+              class="text-blue-500 no-underline hover:underline"
+              >Access the debate &rarr;</a
+            >
+          </td>
+        </tr>
       </table>
     </td>
-  </tr>
+    <if condition="loop.index % 2 === 1">
+      </tr>
+    </if>
+  </each>
 </table>

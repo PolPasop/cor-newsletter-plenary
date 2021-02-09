@@ -1,145 +1,42 @@
-<table
-  class="w-600 sm:w-full"
-  cellpadding="0"
-  cellspacing="0"
-  role="presentation"
->
+<table class="bg-white w-full max-w-500 p-20 rounded-3xl">
   <tr>
-    <td>
-      <table class="w-full">
-        <tr>
-          <td class="w-3/12 bg-white text-center p-24">
-            <table>
-              <tr>
-                <td>
-                  <img src="images/icon-palette.png" width="25" height="25" />
-                </td>
-              </tr>
-              <tr>
-                <td>250</td>
-              </tr>
-              <tr>
-                <td>visuals designed for the website</td>
-              </tr>
-            </table>
-          </td>
-          <td class="w-3/12 bg-white p-24">
-            <table>
-              <tr>
-                <td>
-                  <img src="images/icon-mailbox.png" width="25" height="25" />
-                </td>
-              </tr>
-              <tr>
-                <td>22</td>
-              </tr>
-              <tr>
-                <td>news items in e-newsletter</td>
-              </tr>
-            </table>
-          </td>
-          <td class="w-3/12 bg-white p-24">
-            <table>
-              <tr>
-                <td>
-                  <img src="images/icon-graph-up.png" width="25" height="25" />
-                </td>
-              </tr>
-              <tr>
-                <td>2161</td>
-              </tr>
-              <tr>
-                <td>page views of the 141st Plenary</td>
-              </tr>
-            </table>
-          </td>
-          <td class="w-3/12 bg-white p-24">
-            <table>
-              <tr>
-                <td>
-                  <img src="images/icon-play-btn.png" width="25" height="25" />
-                </td>
-              </tr>
-              <tr>
-                <td>1763</td>
-              </tr>
-              <tr>
-                <td>views of high-level debates</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td class="w-3/12 bg-white p-24">
-            <table>
-              <tr>
-                <td>
-                  <img
-                    src="images/icon-clock-history.png"
-                    width="25"
-                    height="25"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>4</td>
-              </tr>
-              <tr>
-                <td>minutes on average on the 141st Plenary page</td>
-              </tr>
-            </table>
-          </td>
-          <td class="w-3/12 bg-white p-24">
-            <table>
-              <tr>
-                <td>
-                  <img
-                    src="images/icon-chat-left-quote.png"
-                    width="25"
-                    height="25"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>9</td>
-              </tr>
-              <tr>
-                <td>Opinions discussed and adopted</td>
-              </tr>
-            </table>
-          </td>
-          <td class="w-3/12 bg-white p-24">
-            <table>
-              <tr>
-                <td>
-                  <img src="images/icon-globe.png" width="25" height="25" />
-                </td>
-              </tr>
-              <tr>
-                <td>22</td>
-              </tr>
-              <tr>
-                <td>countries with media partnerships</td>
-              </tr>
-            </table>
-          </td>
-          <td class="w-3/12 bg-white p-24">
-            <table>
-              <tr>
-                <td>
-                  <img src="images/icon-heart.png" width="25" height="25" />
-                </td>
-              </tr>
-              <tr>
-                <td>66%</td>
-              </tr>
-              <tr>
-                <td>Brexit as the leading topic with 66%</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
+    <td colspan="2" align="center" style="padding-top: 30px">
+      <h2
+        class="m-0 text-3xl text-slate-darkest font-normal"
+        style="font-weight: 400; font-size: 24px; margin: 0; color: #333333"
+      >
+        In numbers
+      </h2>
     </td>
   </tr>
+  <tr>
+    <td><div class="leading-28">&zwnj;</div></td>
+  </tr>
+  <each loop="item in page.numbers">
+    <if condition="loop.index % 2 === 0">
+      <tr>
+    </if>
+      <td class="w-6/12" align="center">
+        <table class="w-full text-center" cellpadding="20px">
+          <tr>
+            <td class="w-2/12 p-0">
+              <img
+                  src="https://cor.europa.eu/SiteCollectionImages/Newsletter/PostPlenaryNewsletter/{{ item.icon }}"
+                  
+                />
+            </td>
+            <td class="pl-32 w-10/12">
+              <div class="text-4xl font-bold text-corPlenaryBlue">
+                
+                {{ item.number }}
+              </div>
+              <div>{{ item.title }}</div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    <if condition="loop.index % 2 === 1">
+      </tr>
+    </if>
+  </each>
 </table>

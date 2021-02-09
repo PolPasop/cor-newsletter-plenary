@@ -11,6 +11,7 @@
 const fetch = require("node-fetch");
 const parser = require('fast-xml-parser');
 
+
 module.exports = {
   socialmedia: [
     {
@@ -87,10 +88,18 @@ module.exports = {
       
       // get picture for raporteur
       [...config.opinions.items].map( opinion => {
-        const {ImgUrl} = [...config.members.items].find(member => member.Id === opinion.CoR_Op_Rapporteur_ID );
+      const {ImgUrl} = [...config.members.items].find(member => member.Id === opinion.CoR_Op_Rapporteur_ID );
         
         opinion.Raporteur_Picture_URL = ImgUrl;
       });
+
+      // Get Press releases
+      let pressReleasesFeed = await fetch("https://cor.europa.eu/_layouts/15/restapi/restapi.aspx?op=GetAllListItems&site=/en/news&list=pages&filter=ArticleStartDate:Geq:2021-02-02;ArticleStartDate:Leq:2021-02-07;CoR_Article_type:Eq:Press%20release;CoR_Keywords:Contains:Plenary&orderdesc=ArticleStartDate");
+      let pressReleases = await pressReleasesFeed.json();
+
+      config.pressReleases = {
+        items: pressReleases.d.results
+      };
 
       // Get Debates
       let debatesFeed = await fetch("https://cor.europa.eu/_layouts/15/restapi/restapi.aspx?op=GetAllListItems&site=/en/our-work/plenaries&list=debates&order=Plenary_Debate_Date");

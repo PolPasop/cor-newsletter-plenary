@@ -3,6 +3,31 @@ title: "The Website Weekly Newsletter"
 preheader: "👀 Lorem, ipsum, and much dolor in this week's edition"
 image: "images/plenary_illustration.png"
 bodyClass: bg-corLight
+numbers:
+  - number: "250"
+    title: "visuals designed for the website"
+    icon: "icon-palette.png"
+  - number: "22"
+    icon: "icon-mailbox.png"
+    title: "news items in e-newsletter"
+  - number: "2161"
+    icon: "icon-graph-up.png"
+    title: "page views of the 141st Plenary"
+  - number: "1763"
+    icon: "icon-play-btn.png"
+    title: "views of high-level debates"
+  - number: "4"
+    icon: "icon-clock-history.png"
+    title: "minutes on average on the 141st Plenary page"
+  - number: "9"
+    icon: "icon-chat-left-quote.png"
+    title: "Opinions discussed and adopted"
+  - number: "22"
+    icon: "icon-globe.png"
+    title: "countries with media partnerships"
+  - number: "66%"
+    icon: "icon-heart.png"
+    title: "Brexit as the leading topic with 66%"
 ---
 
 <extends src="src/layouts/master.html">
@@ -25,7 +50,7 @@ bodyClass: bg-corLight
                   <tr>
                     <td align="center">
                       <component
-                        src="src/components/innumbersList.html"
+                        src="src/components/innumbers.html"
                       ></component>
                     </td>
                   </tr>
@@ -43,6 +68,14 @@ bodyClass: bg-corLight
                   <tr>
                     <td align="center">
                       <component src="src/components/opinions.html"></component>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="leading-64">&zwnj;</div></td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                      <component src="src/components/more.html"></component>
                     </td>
                   </tr>
                   <tr>
