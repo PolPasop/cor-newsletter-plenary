@@ -74,6 +74,8 @@ module.exports = {
       },
       backgroundColor: {
         corPlenaryBlue: "#006B9F",
+        corPlenaryBlueLight: "#006088",
+        corBlueLight: "#bbd6dd",
         corBlueDark: "#004896",
         corPlenaryYellow: "#FAC32F",
         corEuropcomBlueLight: "#9bc5ce",
