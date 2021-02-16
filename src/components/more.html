@@ -1,33 +1,21 @@
-<table class="bg-white w-full max-w-500 p-20 rounded-3xl">
+<table class="w-full max-w-500">
   <tr>
     <td class="text-left">
-      <h3 class="m-0 text-base font-semibold text-gray-500 uppercase">
-        More from the Plenary
+      <h3 class="m-0 text-base font-semibold text-white uppercase">
+        Highlights from the Plenary
       </h3>
       <div class="leading-24">&zwnj;</div>
       <table class="w-full" cellpadding="0" cellspacing="0" role="presentation">
-        <tbody>
-          <each loop="item in page.pressReleases.items">
-            <tr>
-              <td>
-                <h4 class="m-0 mb-4 text-l font-semibold">
-                  <a
-                    class="text-blue-500 hover:text-blue-400 no-underline"
-                    href="https://cor.europa.eu/en/news/Pages/{{ item.FileLeafRef }}"
-                    >{{ item.Title }}</a
-                  >
-                </h4>
-              </td>
-            </tr>
-            <if condition="loop.remaining !== 0">
-              <tr>
-                <td class="py-24">
-                  <div class="bg-gray-300 h-px leading-px">&zwnj;</div>
-                </td>
-              </tr>
-            </if>
-          </each>
-        </tbody>
+        <tr>
+          <td class="text-center">
+            <a href="">
+              <img
+                width="500"
+                src="https://cor.europa.eu/SiteCollectionImages/Newsletter/PostPlenaryNewsletter/videoCover.png"
+              />
+            </a>
+          </td>
+        </tr>
       </table>
     </td>
   </tr>
