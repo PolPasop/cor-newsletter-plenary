@@ -72,6 +72,7 @@ module.exports = {
       config.members = {
         items: members.d.results
       };
+      console.log('Members done');
 
       // Get Opinions
       let opinionsFeed = await fetch("https://cor.europa.eu/_api/web/lists/GetByTitle('Opinions')/items?$Filter=(CoR_Op_AdoptionDate ge datetime'2020-12-04T00:00:00') and (CoR_Op_AdoptionDate le datetime'2020-12-21T00:00:00')&$orderby=(CoR_Op_AdoptionDate)", {
@@ -93,13 +94,18 @@ module.exports = {
         opinion.Raporteur_Picture_URL = ImgUrl;
       });
 
+      console.log('Opinions done');
+
       // Get Press releases
+      /*
       let pressReleasesFeed = await fetch("https://cor.europa.eu/_layouts/15/restapi/restapi.aspx?op=GetAllListItems&site=/en/news&list=pages&filter=ArticleStartDate:Geq:2021-02-02;ArticleStartDate:Leq:2021-02-07;CoR_Article_type:Eq:Press%20release;CoR_Keywords:Contains:Plenary&orderdesc=ArticleStartDate");
       let pressReleases = await pressReleasesFeed.json();
 
       config.pressReleases = {
         items: pressReleases.d.results
       };
+      */
+      
 
       // Get Debates
       let debatesFeed = await fetch("https://cor.europa.eu/_layouts/15/restapi/restapi.aspx?op=GetAllListItems&site=/en/our-work/plenaries&list=debates&order=Plenary_Debate_Date");
@@ -117,6 +123,21 @@ module.exports = {
         debate.Plenary_Debate_SpeakerPictureURL = "https://cor.europa.eu" + regex.exec(debate.Plenary_Debate_SpeakerPicture)[1];;
       });
 
+      console.log('Debates done');
+
     }
+  },
+  inlineCSS: {
+    applySizeAttribute: {
+      width: ['IMG'],
+    },
+  },
+  extraAttributes: {
+    table: {
+      border: 0,
+      cellpadding: 0,
+      cellspacing: 0,
+      role: 'presentation',
+    },
   },
 } 
