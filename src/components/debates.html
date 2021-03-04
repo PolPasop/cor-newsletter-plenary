@@ -17,8 +17,7 @@
           </td>
         </tr>
         <tr>
-          <td colspan="2">
-            <div class="italic p-20">
+          <td colspan="2" class="p-20 italic">
               <img
                 class="mr-20"
                 width="20"
@@ -30,20 +29,31 @@
                 src="https://cor.europa.eu/SiteCollectionImages/Newsletter/PostPlenaryNewsletter/icon-quote-left.png"
                 class="ml-20"
               />
-            </div>
           </td>
         </tr>
         <tr>
           <td class="w-10/12 bg-white px-20 pb-20 rounded-br rounded-bl">
-            <strong>{{ item.Speaker }}</strong>
-            <div class="m-0 mb-16 text-base text-gray-400 pt-12">
-              {{ item.Debate_SpeakerTitle }}
-            </div>
-            <a
-              href="{{ item.Plenary_Debate_VideoLinkURL }}"
-              class="text-blue-500 no-underline hover:underline"
-              >Access the debate &rarr;</a
-            >
+            <table>
+              <tr>
+                <td class="font-bold">{{ item.Speaker }}</td>
+              </tr>
+              <tr>
+                <td class="m-0 text-base text-gray-400 pt-12">
+                  {{ item.Debate_SpeakerTitle }}
+                </td>
+              </tr>
+              <tr>
+                <td class="pt-16 text-blue-500 no-underline hover:underline">
+                  <a
+                    href="{{ item.Plenary_Debate_VideoLinkURL }}"
+                    class="text-blue-500 no-underline hover:underline"
+                    >Access the debate &rarr;</a
+                  >
+                </td>
+              </tr>
+            </table>
+            
+            
           </td>
         </tr>
       </table>
