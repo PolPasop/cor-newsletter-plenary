@@ -10,12 +10,18 @@
     <td class="h-32"></td>
   </tr>
   <tr>
-    <td class="text-center">
-      <each loop="item in page.socialmedia">
-        <a href="{{ item.url }}" name="{{ item.name }}" class="p-16"
-          ><img src="{{ item.logoUrl }}" width="50px" height="50px"
-        /></a>
-      </each>
+    <td>
+      <table class="w-600 sm:w-full">
+        <tr>
+          <each loop="item in page.socialmedia">
+            <td class="text-center p-16">
+              <a href="{{ item.url }}" name="{{ item.name }}"
+                ><img src="{{ item.logoUrl }}" width="50" height="50"
+              /></a>
+            </td>
+          </each>
+        </tr>
+      </table>
     </td>
   </tr>
   <tr>
@@ -25,23 +31,15 @@
     <td>
       <table class="w-600 sm:w-full">
         <tr>
-          <td class="w-4/12 bg-cool-gray-300 text-center text-sm text-white">
-            <a href="" class="text-white hover:text-blue-400 no-underline pr-10"
-              >Manage subscription</a
+          <each loop="item in page.footerelements">
+            <td
+              class="bg-cool-gray-300 text-center text-sm text-white px-10 {{ 'pr-10' if loop.first }} {{ 'pr-10' if loop.last }}"
             >
-
-            <a href="" class="text-white hover:text-blue-400 no-underline px-10"
-              >Unsubscribe</a
-            >
-
-            <a href="" class="text-white hover:text-blue-400 no-underline px-10"
-              >Environmental statement</a
-            >
-
-            <a href="" class="text-white hover:text-blue-400 no-underline pl-10"
-              >Legal notice</a
-            >
-          </td>
+              <a href="" class="text-white hover:text-blue-400 no-underline"
+                >{{ item }}</a
+              >
+            </td>
+          </each>
         </tr>
       </table>
     </td>
