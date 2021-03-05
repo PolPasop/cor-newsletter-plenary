@@ -16,7 +16,7 @@
           <each loop="item in page.socialmedia">
             <td class="text-center p-16">
               <a href="{{ item.url }}" name="{{ item.name }}"
-                ><img src="{{ item.logoUrl }}" width="50" height="50"
+                ><img src="{{ item.logoUrl }}" width="50"
               /></a>
             </td>
           </each>
@@ -30,10 +30,10 @@
   <tr>
     <td>
       <table class="w-600 sm:w-full">
-        <tr>
+        <tr align="center">
           <each loop="item in page.footerelements">
             <td
-              class="bg-cool-gray-300 text-center text-sm text-white px-10 {{ 'pr-10' if loop.first }} {{ 'pr-10' if loop.last }}"
+              class="sm:w-full inline-block bg-cool-gray-300 text-center text-sm text-white px-10 {{ 'pr-10' if loop.first }} {{ 'pr-10' if loop.last }}"
             >
               <a href="" class="text-white hover:text-blue-400 no-underline"
                 >{{ item }}</a
