@@ -15,3 +15,8 @@
 
 /* Your custom utility classes */
 @import "custom/utilities";
+
+
+.sm\:w-full {
+  display: block;
+}
