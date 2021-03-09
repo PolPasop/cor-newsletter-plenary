@@ -6,7 +6,8 @@
     "watch": "maizzle serve"
   },
   "dependencies": {
-    "@maizzle/framework": "^3.0.0"
+    "@maizzle/framework": "^3.0.0",
+    "netlify-cli": "^3.10.6"
   },
   "devDependencies": {
     "fast-xml-parser": "^3.17.6",

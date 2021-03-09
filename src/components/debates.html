@@ -5,7 +5,7 @@
     </td>
   </tr>
   <each loop="item in page.debates.items">
-    <if condition="loop.index % 2 === 0">
+    <if condition="(loop.index + 1) % 2 === 1">
       <tr>
     </if>
 
@@ -58,7 +58,7 @@
         </tr>
       </table>
     </td>
-    <if condition="loop.index % 2 === 1">
+    <if condition="(loop.index + 1) % 2 === 0">
       </tr>
     </if>
   </each>
