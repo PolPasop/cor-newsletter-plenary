@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "@maizzle/framework": "^3.0.0",
-    "netlify-cli": "^3.10.6"
+    "netlify-cli": "^3.11.0"
   },
   "devDependencies": {
     "fast-xml-parser": "^3.17.6",
