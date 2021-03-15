@@ -32,6 +32,7 @@ maizzle serve
 
 # build for production
 maizzle build production
+netlify deploy --dir  build_production --prod
 ```
 
 ## Documentation
