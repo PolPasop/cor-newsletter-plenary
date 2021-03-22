@@ -86,11 +86,11 @@ module.exports = {
       config.opinions = {
         items: opinions.d.results
       };
-      
+
       // get picture for raporteur
-      [...config.opinions.items].map( opinion => {
-      const {ImgUrl} = [...config.members.items].find(member => member.Id === opinion.CoR_Op_Rapporteur_ID );
-        
+      [...config.opinions.items].map(opinion => {
+        const { ImgUrl } = [...config.members.items].find(member => member.Id === opinion.CoR_Op_Rapporteur_ID);
+
         opinion.Raporteur_Picture_URL = ImgUrl;
       });
 
@@ -105,7 +105,7 @@ module.exports = {
         items: pressReleases.d.results
       };
       */
-      
+
 
       // Get Debates
       let debatesFeed = await fetch("https://cor.europa.eu/_layouts/15/restapi/restapi.aspx?op=GetAllListItems&site=/en/our-work/plenaries&list=debates&order=Plenary_Debate_Date");
@@ -116,9 +116,9 @@ module.exports = {
       };
 
       // get url from video field
-      [...config.debates.items].map( debate => debate.Plenary_Debate_VideoLinkURL = debate.Plenary_Debate_VideoLink.substr(0, debate.Plenary_Debate_VideoLink.indexOf(',')));
+      [...config.debates.items].map(debate => debate.Plenary_Debate_VideoLinkURL = debate.Plenary_Debate_VideoLink.substr(0, debate.Plenary_Debate_VideoLink.indexOf(',')));
       // get src from Speakerpictures
-      [...config.debates.items].map( debate => {
+      [...config.debates.items].map(debate => {
         const regex = /<img.*?src=['"](.*?)['"]/;
         debate.Plenary_Debate_SpeakerPictureURL = "https://cor.europa.eu" + regex.exec(debate.Plenary_Debate_SpeakerPicture)[1];;
       });
@@ -139,5 +139,5 @@ module.exports = {
       cellspacing: 0,
       role: 'presentation',
     },
-  },
-} 
+  }
+}
